@@ -81,7 +81,6 @@ public class Sort
         int temp = arr[i + 1];
         arr[i + 1] = arr[highIndex];
         arr[highIndex] = temp;
-        System.out.println("i is " + i );
         return i + 1;
     }
 

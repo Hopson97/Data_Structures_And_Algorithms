@@ -1,6 +1,7 @@
 package main;
 
 import algorithm.Sort;
+import algorithm.Search;
 /**
  *
  * @author mhops
@@ -19,6 +20,7 @@ public class Main
         int[] data = {1, 2, 5, 3, 4, 6, 9, 8, 7};
         Sort.quickSort(data);
         
+        System.out.println("search: " + Search.binarySearch(data, 5));
         
         printArray(data);
     }
