@@ -17,7 +17,7 @@ public class Main
     public static void main(String[] args)
     {
         int[] data = {1, 2, 5, 3, 4, 6, 9, 8, 7};
-        Sort.bubbleSort(data);
+        Sort.quickSort(data);
         
         
         printArray(data);
