@@ -28,3 +28,10 @@ This is what has been done so far:
 #### Sorts
 * Bubble sort
 * Insertion sort
+
+## C
+
+### Algorithms
+
+#### Sorts
+* Bubble sort
