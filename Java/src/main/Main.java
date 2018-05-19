@@ -21,7 +21,6 @@ public class Main
         Sort.quickSort(data);
         
         System.out.println("search: " + Search.binarySearch(data, 5));
-        
         printArray(data);
     }
 }
