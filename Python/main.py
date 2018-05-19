@@ -1,8 +1,9 @@
-from sort_algorithms import bubble_sort, insertion_sort
+import sort_algorithms as Sort
+import search_algorithms as Search
 
 if __name__ == "__main__":
     data = [5, 2, 3, 7, 8, 4, 1, 9, 6]
 
-    insertion_sort(data)
+    Sort.insertion_sort(data)
 
-    print(data)
+    print(Search.binary_search(data, 2))
