@@ -16,3 +16,17 @@ Java/nbactions.xml
 #
 Python/.vscode/
 Python/__pycache__
+
+#
+# C/C++
+#
+
+Debug/
+Release/
+*.dll
+
+*.filters
+*.user
+*.aps
+
+.vs/
