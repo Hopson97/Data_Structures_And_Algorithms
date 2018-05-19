@@ -1,7 +1,7 @@
 
-# Created by https://www.gitignore.io/api/netbeans
-
-### NetBeans ###
+#
+#   JAVA 
+#
 Java/nbproject/private/
 Java/build/
 Java/nbbuild/
@@ -11,4 +11,8 @@ Java/.nb-gradle/
 Java/nbactions.xml
 
 
-# End of https://www.gitignore.io/api/netbeans
+#
+#   PYTHON
+#
+Python/.vscode/
+Python/__pycache__
