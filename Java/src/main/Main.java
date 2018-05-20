@@ -2,6 +2,7 @@ package main;
 
 import algorithm.Sort;
 import algorithm.Search;
+import datastructures.LinkedList;
 /**
  *
  * @author mhops
@@ -22,5 +23,11 @@ public class Main
         
         System.out.println("search: " + Search.binarySearch(data, 5));
         printArray(data);
+        
+        LinkedList<Integer> myList = new LinkedList<>();
+        for (int i = 0; i < 10; i++) {
+            myList.addFront(i);
+        }
+        System.out.println("List at 2: " + myList.get(2));
     }
 }
