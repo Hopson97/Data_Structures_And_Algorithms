@@ -26,45 +26,78 @@ public class LinkedList<T>
     public LinkedList() 
     { }
     
-    public void add(T data)
+    /**
+     * Replaces a node by putting a new node before it, thus inserting it.
+     * For the end node, it adds it after; as the last node is seen as a null.
+     * @param replacee The node to replace a new node with/ insert the new node before
+     * @param data The data to add to the list
+     */
+    private void insert(Node replacee, T data)
     {
         Node newNode = new Node(data);
-        if (m_size == 0) {
-            m_begin = newNode;
-            m_end = newNode;
-        }
-        else {
-            newNode.before = m_end;
-            m_end.next = newNode;
-            m_end = newNode;
-        }
+        newNode.before = replacee != null ? replacee.before : m_end;
+        newNode.next   = replacee;
         
-        m_size++;
+        if (newNode.before != null) newNode.before.next = newNode;
+        if (replacee != null)       replacee.before = newNode;
+        
+        if (replacee == m_begin) m_begin = newNode;
+        if (replacee == null)    m_end = newNode;
+        
+         m_size++;
     }
     
-    public void addFront(T data) 
+    private void erase(Node toErase)
     {
-        Node newNode = new Node(data);
-        if (m_size == 0) {
-            m_begin = newNode;
-            m_end = newNode;
+        if (toErase.before != null) {
+            toErase.before.next = toErase.next;
         }
-        else {
-            newNode.next = m_begin;
-            m_begin.before = newNode;
-            m_begin = newNode;
+        if (toErase.next != null) {
+            toErase.next.before = toErase.before;
         }
+        if (toErase == m_end)    m_end = toErase.before;
+        if (toErase == m_begin)  m_end = toErase.next;
         
-        m_size++;
+        m_size--;
     }
     
-    public T get(int index) 
+    private Node getNode(int index)
     {
         Node itr = m_begin;
         for (int i = 0; i < index; i++) {
             itr = itr.next;
         }
-        return itr.data;
+        return itr;
+    }
+    
+    public void erase(int index)
+    {
+        erase(getNode(index));
+    }
+    
+    public void add(T data)
+    {
+        insert(null, data);
+    }
+    
+    public void addFront(T data) 
+    {
+        insert(m_begin, data);
+    }
+    
+    public void insert(int index, T data)
+    {
+        insert(getNode(index), data);
+    }
+    
+    public T get(int index) 
+    {
+        return getNode(index).data;
+    }
+    
+    public int size()
+    {
+        return m_size;
     }
     
 }

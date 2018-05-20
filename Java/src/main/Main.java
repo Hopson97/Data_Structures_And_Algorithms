@@ -18,16 +18,16 @@ public class Main
     
     public static void main(String[] args)
     {
-        int[] data = {1, 2, 5, 3, 4, 6, 9, 8, 7};
-        Sort.quickSort(data);
-        
-        System.out.println("search: " + Search.binarySearch(data, 5));
-        printArray(data);
-        
         LinkedList<Integer> myList = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
-            myList.addFront(i);
+            myList.add(i);
         }
-        System.out.println("List at 2: " + myList.get(2));
+        
+        System.out.println();
+        myList.erase(1);
+        System.out.println("sise " + myList.size());
+        for (int i = 0; i < myList.size(); i++) {
+            System.out.println("List at " + i + ": " + myList.get(i));
+        }
     }
 }
