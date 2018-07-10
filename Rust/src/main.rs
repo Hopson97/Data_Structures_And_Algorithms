@@ -1,4 +1,5 @@
 mod algorithm;
+mod data_structure;
 
 fn main() {
     let mut vec: Vec<i32> = vec![3, 1, 2, 4, 5, 9, 7, 8, 6];
