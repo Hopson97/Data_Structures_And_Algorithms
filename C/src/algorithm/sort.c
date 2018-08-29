@@ -1,6 +1,6 @@
-#include "Sort.h"
+#include "sort.h"
 
-#include "../Util.h"
+#include "../util.h"
 
 void bubbleSort(int data[], int n)
 {

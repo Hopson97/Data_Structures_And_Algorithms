@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Algorithm/Sort.h"
+#include "algorithm/sort.h"
 
 void printArray(int data[], int n)
 {

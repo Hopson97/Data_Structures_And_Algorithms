@@ -111,71 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named DSA
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+DSA: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DSA
+.PHONY : DSA
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+DSA/fast:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/build
+.PHONY : DSA/fast
 
-src/Algorithm/Sort.o: src/Algorithm/Sort.c.o
+src/algorithm/sort.o: src/algorithm/sort.c.o
 
-.PHONY : src/Algorithm/Sort.o
-
-# target to build an object file
-src/Algorithm/Sort.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Algorithm/Sort.c.o
-.PHONY : src/Algorithm/Sort.c.o
-
-src/Algorithm/Sort.i: src/Algorithm/Sort.c.i
-
-.PHONY : src/Algorithm/Sort.i
-
-# target to preprocess a source file
-src/Algorithm/Sort.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Algorithm/Sort.c.i
-.PHONY : src/Algorithm/Sort.c.i
-
-src/Algorithm/Sort.s: src/Algorithm/Sort.c.s
-
-.PHONY : src/Algorithm/Sort.s
-
-# target to generate assembly for a file
-src/Algorithm/Sort.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Algorithm/Sort.c.s
-.PHONY : src/Algorithm/Sort.c.s
-
-src/Util.o: src/Util.c.o
-
-.PHONY : src/Util.o
+.PHONY : src/algorithm/sort.o
 
 # target to build an object file
-src/Util.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.c.o
-.PHONY : src/Util.c.o
+src/algorithm/sort.c.o:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/sort.c.o
+.PHONY : src/algorithm/sort.c.o
 
-src/Util.i: src/Util.c.i
+src/algorithm/sort.i: src/algorithm/sort.c.i
 
-.PHONY : src/Util.i
+.PHONY : src/algorithm/sort.i
 
 # target to preprocess a source file
-src/Util.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.c.i
-.PHONY : src/Util.c.i
+src/algorithm/sort.c.i:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/sort.c.i
+.PHONY : src/algorithm/sort.c.i
 
-src/Util.s: src/Util.c.s
+src/algorithm/sort.s: src/algorithm/sort.c.s
 
-.PHONY : src/Util.s
+.PHONY : src/algorithm/sort.s
 
 # target to generate assembly for a file
-src/Util.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.c.s
-.PHONY : src/Util.c.s
+src/algorithm/sort.c.s:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/sort.c.s
+.PHONY : src/algorithm/sort.c.s
 
 src/main.o: src/main.c.o
 
@@ -183,7 +156,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.o
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -192,7 +165,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.i
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -201,8 +174,35 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/util.o: src/util.c.o
+
+.PHONY : src/util.o
+
+# target to build an object file
+src/util.c.o:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/util.c.o
+.PHONY : src/util.c.o
+
+src/util.i: src/util.c.i
+
+.PHONY : src/util.i
+
+# target to preprocess a source file
+src/util.c.i:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/util.c.i
+.PHONY : src/util.c.i
+
+src/util.s: src/util.c.s
+
+.PHONY : src/util.s
+
+# target to generate assembly for a file
+src/util.c.s:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/util.c.s
+.PHONY : src/util.c.s
 
 # Help Target
 help:
@@ -211,17 +211,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... DSA"
 	@echo "... edit_cache"
-	@echo "... src/Algorithm/Sort.o"
-	@echo "... src/Algorithm/Sort.i"
-	@echo "... src/Algorithm/Sort.s"
-	@echo "... src/Util.o"
-	@echo "... src/Util.i"
-	@echo "... src/Util.s"
+	@echo "... src/algorithm/sort.o"
+	@echo "... src/algorithm/sort.i"
+	@echo "... src/algorithm/sort.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/util.o"
+	@echo "... src/util.i"
+	@echo "... src/util.s"
 .PHONY : help
 
 
