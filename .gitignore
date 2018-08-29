@@ -34,3 +34,8 @@ Release/
 CMakeCache.txt
 cmake_install.cmake
 CMakeFiles/
+
+
+#other
+*.vscode
+C/dsa
