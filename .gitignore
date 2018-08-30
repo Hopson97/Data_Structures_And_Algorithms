@@ -6,7 +6,7 @@
 .gradle/
 java/build/
 java/gradle-app.setting
-
+java/.classpath
 #netbeans
 java/nbproject/private/
 java/build/
