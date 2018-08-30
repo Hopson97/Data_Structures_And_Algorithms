@@ -32,8 +32,7 @@ public class MyLinkedList<T>
      * @param replacee The node to replace a new node with/ insert the new node before
      * @param data The data to add to the list
      */
-    private void insert(Node replacee, T data)
-    {
+    private void insert(Node replacee, T data) {
         Node newNode = new Node(data);
         newNode.before = replacee != null ? replacee.before : m_end;
         newNode.next   = replacee;
@@ -47,8 +46,7 @@ public class MyLinkedList<T>
          m_size++;
     }
     
-    private void erase(Node toErase)
-    {
+    private void erase(Node toErase) {
         if (toErase.before != null) {
             toErase.before.next = toErase.next;
         }
@@ -61,8 +59,7 @@ public class MyLinkedList<T>
         m_size--;
     }
     
-    private Node getNode(int index)
-    {
+    private Node getNode(int index) {
         Node itr = m_begin;
         for (int i = 0; i < index; i++) {
             itr = itr.next;
@@ -70,33 +67,27 @@ public class MyLinkedList<T>
         return itr;
     }
     
-    public void erase(int index)
-    {
+    public void erase(int index) {
         erase(getNode(index));
     }
     
-    public void add(T data)
-    {
+    public void add(T data) {
         insert(null, data);
     }
     
-    public void addFront(T data) 
-    {
+    public void addFront(T data) {
         insert(m_begin, data);
     }
     
-    public void insert(int index, T data)
-    {
+    public void insert(int index, T data) {
         insert(getNode(index), data);
     }
     
-    public T get(int index) 
-    {
+    public T get(int index) {
         return getNode(index).data;
     }
     
-    public int size()
-    {
+    public int size() {
         return m_size;
     }
     
