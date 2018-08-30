@@ -2,14 +2,23 @@
 #
 #   JAVA 
 #
-Java/nbproject/private/
-Java/build/
-Java/nbbuild/
-Java/dist/
-Java/nbdist/
-Java/.nb-gradle/
-Java/nbactions.xml
+#Gradle
+.gradle/
+java/build/
+java/gradle-app.setting
 
+#netbeans
+java/nbproject/private/
+java/build/
+java/nbbuild/
+java/dist/
+java/nbdist/
+java/.nb-gradle/
+java/nbactions.xml
+
+ignored)
+!gradle-wrapper.jar
+.gradletasknamecache
 
 #
 #   PYTHON
@@ -40,3 +49,5 @@ CMakeFiles/
 *.vscode
 C/dsa
 C/DSA
+
+*bin

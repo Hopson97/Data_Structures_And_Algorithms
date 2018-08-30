@@ -1,4 +1,4 @@
-package main;
+package dsa;
 
 import datastructures.LinkedList;
 /**
