@@ -1,11 +1,11 @@
-package datastructures;
+package dsa.datastructures;
 
 /**
  *
  * @author mhops
  * @param <T> The data type for the linked list to hold
  */
-public class LinkedList<T>
+public class MyLinkedList<T>
 {
     class Node 
     {
@@ -23,7 +23,7 @@ public class LinkedList<T>
     Node m_end = null;
     int m_size = 0;
     
-    public LinkedList() 
+    public MyLinkedList() 
     { }
     
     /**

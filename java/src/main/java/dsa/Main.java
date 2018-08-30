@@ -1,6 +1,6 @@
 package dsa;
 
-import datastructures.LinkedList;
+import dsa.datastructures.MyLinkedList;
 /**
  *
  * @author mhops
@@ -16,16 +16,6 @@ public class Main
     
     public static void main(String[] args)
     {
-        LinkedList<Integer> myList = new LinkedList<>();
-        for (int i = 0; i < 10; i++) {
-            myList.add(i);
-        }
         
-        System.out.println();
-        myList.erase(1);
-        System.out.println("sise " + myList.size());
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.println("List at " + i + ": " + myList.get(i));
-        }
     }
 }
