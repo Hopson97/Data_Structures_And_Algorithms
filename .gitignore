@@ -44,6 +44,7 @@ CMakeCache.txt
 cmake_install.cmake
 CMakeFiles/
 
+MakeFile
 
 #other
 *.vscode
