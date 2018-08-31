@@ -6,4 +6,5 @@ add_executable(${CMAKE_PROJECT_NAME}
     src/main.c 
     src/util.c 
     src/algorithm/sort.c
+    src/algorithm/search.c
 )

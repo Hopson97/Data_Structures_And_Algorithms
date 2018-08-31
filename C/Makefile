@@ -123,6 +123,33 @@ DSA/fast:
 	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/build
 .PHONY : DSA/fast
 
+src/algorithm/search.o: src/algorithm/search.c.o
+
+.PHONY : src/algorithm/search.o
+
+# target to build an object file
+src/algorithm/search.c.o:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/search.c.o
+.PHONY : src/algorithm/search.c.o
+
+src/algorithm/search.i: src/algorithm/search.c.i
+
+.PHONY : src/algorithm/search.i
+
+# target to preprocess a source file
+src/algorithm/search.c.i:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/search.c.i
+.PHONY : src/algorithm/search.c.i
+
+src/algorithm/search.s: src/algorithm/search.c.s
+
+.PHONY : src/algorithm/search.s
+
+# target to generate assembly for a file
+src/algorithm/search.c.s:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/search.c.s
+.PHONY : src/algorithm/search.c.s
+
 src/algorithm/sort.o: src/algorithm/sort.c.o
 
 .PHONY : src/algorithm/sort.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... DSA"
 	@echo "... edit_cache"
+	@echo "... src/algorithm/search.o"
+	@echo "... src/algorithm/search.i"
+	@echo "... src/algorithm/search.s"
 	@echo "... src/algorithm/sort.o"
 	@echo "... src/algorithm/sort.i"
 	@echo "... src/algorithm/sort.s"
