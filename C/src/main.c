@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "util.h"
 #include "algorithm/sort.h"
 #include "algorithm/search.h"
 
@@ -11,21 +12,25 @@ void testBubbleSort()
     doubleNewLine();
 }
 
-void testLinearSearch() 
+void testSearch(SearchFunction function, const char* name) 
 {
-    int data[] = { 5, 2, 3, 7, 8, 4, 1, 9, 6 };
-    printf("Testing linear search\n");
-    int index = linearSearch(data, 9, 3);
-    printf("Found index: %d\n", index);
+    int data[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    printf("Testing %s search\n", name);
+    int result = function(data, 13, 4);
+    printf("Result: %d\n", result);
     doubleNewLine();
 }
-    
 
 int main()
 {
     printf("\n\nDSA IN C\n\n");
     testBubbleSort();
-    testLinearSearch();
+
+    testSearch(&linearSearch, "linear");
+    testSearch(&binarySearchItr, "Binary Iterative");
+
+    //testLinearSearch();
+    //testBinarySearch();
 // Visual studio auto-closes exe on end, 
 // this will pause that so you can view output
 #ifdef __WIN32

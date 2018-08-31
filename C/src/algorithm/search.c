@@ -1,5 +1,7 @@
 #include "search.h"
 
+#include <stdio.h>
+
 int linearSearch(int* data, int n, int searhFor) 
 {
     for (int i = 0; i < n; i++) {
@@ -7,3 +9,27 @@ int linearSearch(int* data, int n, int searhFor)
     }
     return -1;
 } 
+
+int binarySearchItr(int* data, int n, int searhFor) 
+{
+    int min = 0;
+    int max = n;
+    int pivot = (min + max) / 2;
+    while (min != max) {
+        int value = data[pivot];
+        printf("Binary Search: Looking at value: %d\n", value);
+        if (value == searhFor) {
+            return 1;
+        }
+        else {
+            if (value > searhFor) {
+                max /= 2;
+                pivot = (min + max) / 2;
+            }
+            else {
+                min = pivot;
+                pivot = (min + max) / 2;
+            }
+        }
+    }
+}
