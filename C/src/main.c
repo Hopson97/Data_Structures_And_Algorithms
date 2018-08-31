@@ -35,11 +35,9 @@ int main()
     testSearch(&linearSearch, "linear");
     testSearch(&binarySearchItr, "Binary Iterative");
 
-    //testLinearSearch();
-    //testBinarySearch();
 // Visual studio auto-closes exe on end, 
 // this will pause that so you can view output
-#ifdef __WIN32
+#ifdef _MSC_VER
     printf("Press enter to end\n");
     getchar();
 #endif
