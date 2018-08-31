@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "util.h"
 #include "algorithm/sort.h"
 #include "algorithm/search.h"
@@ -14,11 +15,16 @@ void testBubbleSort()
 
 void testSearch(SearchFunction function, const char* name) 
 {
-    int data[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    int n = 1000;
+    int* data = malloc(sizeof(int) * n);
+    for (int i = 0; i < n; i++) data[i] = i;
+
     printf("Testing %s search\n", name);
-    int result = function(data, 13, 4);
+    int result = function(data, n, 993);
     printf("Result: %d\n", result);
     doubleNewLine();
+
+    free(data);
 }
 
 int main()

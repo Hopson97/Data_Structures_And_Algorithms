@@ -17,13 +17,13 @@ int binarySearchItr(int* data, int n, int searhFor)
     int pivot = (min + max) / 2;
     while (min != max) {
         int value = data[pivot];
-        printf("Binary Search: Looking at value: %d\n", value);
+        printf("Binary Search: Looking at value: %d %d %d\n", value, min, max);
         if (value == searhFor) {
             return 1;
         }
         else {
             if (value > searhFor) {
-                max /= 2;
+                max = (pivot + max) / 2;
                 pivot = (min + max) / 2;
             }
             else {
@@ -32,4 +32,5 @@ int binarySearchItr(int* data, int n, int searhFor)
             }
         }
     }
+    return 0;
 }
