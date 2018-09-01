@@ -4,6 +4,8 @@
 #include "algorithm/sort.h"
 #include "algorithm/search.h"
 
+#include "data_structure/ArrayList.h"
+
 void testBubbleSort() 
 {
     int data[] = { 5, 2, 3, 7, 8, 4, 1, 9, 6 };
@@ -27,13 +29,29 @@ void testSearch(SearchFunction function, const char* name)
     free(data);
 }
 
+void testArrayList() 
+{
+    printf("Testing array list\n");
+    struct ArrayList list = arrayListCreate(10);
+    for (int i = 0; i < 75; i++) {
+        arrayListPush(&list, i);
+        printf("Size: %d, Capacity: %d\n", list.size, list.capacity);
+    }
+
+    printf("Array list at index 57: %d\n", arrayListGet(&list, 57));
+
+    destroyList(&list);
+}
+
 int main()
 {
     printf("\n\nDSA IN C\n\n");
-    testBubbleSort();
+    //testBubbleSort();
 
-    testSearch(&linearSearch, "linear");
-    testSearch(&binarySearchItr, "Binary Iterative");
+    //testSearch(&linearSearch, "linear");
+    //testSearch(&binarySearchItr, "Binary Iterative");
+
+    testArrayList();
 
 // Visual studio auto-closes exe on end, 
 // this will pause that so you can view output

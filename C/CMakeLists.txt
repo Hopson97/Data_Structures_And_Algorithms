@@ -7,4 +7,5 @@ add_executable(${CMAKE_PROJECT_NAME}
     src/util.c 
     src/algorithm/sort.c
     src/algorithm/search.c
+    src/data_structure/ArrayList.c
 )
