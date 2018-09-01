@@ -22,3 +22,7 @@ Generate builds using CMake and run using your favoruite IDE or build system etc
 
 * Linear search
 * Binary search (Iterative version)
+
+### Data Structures
+
+* Array list
