@@ -4,7 +4,7 @@
 #include "algorithm/sort.h"
 #include "algorithm/search.h"
 
-#include "data_structure/ArrayList.h"
+#include "data_structure/array_list.h"
 
 void testBubbleSort() 
 {

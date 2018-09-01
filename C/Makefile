@@ -177,32 +177,32 @@ src/algorithm/sort.c.s:
 	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/algorithm/sort.c.s
 .PHONY : src/algorithm/sort.c.s
 
-src/data_structure/ArrayList.o: src/data_structure/ArrayList.c.o
+src/data_structure/array_list.o: src/data_structure/array_list.c.o
 
-.PHONY : src/data_structure/ArrayList.o
+.PHONY : src/data_structure/array_list.o
 
 # target to build an object file
-src/data_structure/ArrayList.c.o:
-	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/ArrayList.c.o
-.PHONY : src/data_structure/ArrayList.c.o
+src/data_structure/array_list.c.o:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/array_list.c.o
+.PHONY : src/data_structure/array_list.c.o
 
-src/data_structure/ArrayList.i: src/data_structure/ArrayList.c.i
+src/data_structure/array_list.i: src/data_structure/array_list.c.i
 
-.PHONY : src/data_structure/ArrayList.i
+.PHONY : src/data_structure/array_list.i
 
 # target to preprocess a source file
-src/data_structure/ArrayList.c.i:
-	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/ArrayList.c.i
-.PHONY : src/data_structure/ArrayList.c.i
+src/data_structure/array_list.c.i:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/array_list.c.i
+.PHONY : src/data_structure/array_list.c.i
 
-src/data_structure/ArrayList.s: src/data_structure/ArrayList.c.s
+src/data_structure/array_list.s: src/data_structure/array_list.c.s
 
-.PHONY : src/data_structure/ArrayList.s
+.PHONY : src/data_structure/array_list.s
 
 # target to generate assembly for a file
-src/data_structure/ArrayList.c.s:
-	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/ArrayList.c.s
-.PHONY : src/data_structure/ArrayList.c.s
+src/data_structure/array_list.c.s:
+	$(MAKE) -f CMakeFiles/DSA.dir/build.make CMakeFiles/DSA.dir/src/data_structure/array_list.c.s
+.PHONY : src/data_structure/array_list.c.s
 
 src/main.o: src/main.c.o
 
@@ -273,9 +273,9 @@ help:
 	@echo "... src/algorithm/sort.o"
 	@echo "... src/algorithm/sort.i"
 	@echo "... src/algorithm/sort.s"
-	@echo "... src/data_structure/ArrayList.o"
-	@echo "... src/data_structure/ArrayList.i"
-	@echo "... src/data_structure/ArrayList.s"
+	@echo "... src/data_structure/array_list.o"
+	@echo "... src/data_structure/array_list.i"
+	@echo "... src/data_structure/array_list.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
