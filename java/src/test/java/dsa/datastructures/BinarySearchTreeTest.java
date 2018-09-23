@@ -13,11 +13,7 @@ public class BinarySearchTreeTest {
         tree.add(5, "World");
         tree.add(15, "Foo");
         tree.add(20, "Bar");
-
-        String x = tree.find(15);
-        System.out.println(x);
-
-       // assertEquals("Foo", tree.find(15));
+        assertEquals("Foo", tree.find(15));
     }
 
 }

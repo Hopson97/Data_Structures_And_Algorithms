@@ -18,12 +18,19 @@ public class Main {
 
         tree.add(10, "Hello");
         tree.add(5, "World");
+        tree.add(-10, "World");
         tree.add(15, "Foo");
         tree.add(20, "Bar");
         tree.add(17, "swag");
-        tree.add(-10, "-10");
+        tree.add(7, "Thsi");
+        tree.add(12, "-10");
+        tree.add(44, "-10");
+        tree.add(1, "-10");
+        tree.add(6, "-10");
 
         String x = tree.find(17);
         System.out.println(x);
+
+        tree.print();
     }
 }

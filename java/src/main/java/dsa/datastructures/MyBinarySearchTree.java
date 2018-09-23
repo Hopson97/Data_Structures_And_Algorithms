@@ -47,6 +47,20 @@ public class MyBinarySearchTree {
         return  "FAIL";
     }
 
+    public void print() {
+        System.out.println("=========");
+        System.out.println("PRINTING TREE");
+        depthFirstTraversal(root);
+    }
+
+    private void depthFirstTraversal(NodePointer root) {
+        if (root.node == null) return;
+        
+        System.out.printf("Key: %d Value: %s\n", root.node.key, root.node.value);
+        depthFirstTraversal(root.node.left);
+        depthFirstTraversal(root.node.right);
+    }
+
     private NodePointer find(NodePointer nodeptr, int key) {
         if (nodeptr.node == null) {
             System.out.println("Find: Failed");
