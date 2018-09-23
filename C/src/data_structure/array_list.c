@@ -37,6 +37,11 @@ int arrayListPush(struct ArrayList* ls, int value)
     ls->data[ls->size - 1] = value;  
 }
 
+void arrayListPop(struct ArrayList* list) 
+{
+    list->size--;
+}
+
 int arrayListGet(struct ArrayList* ls, int index)
 {
     return ls->data[index];
