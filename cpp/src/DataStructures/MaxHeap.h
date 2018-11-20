@@ -25,7 +25,6 @@ class MaxHeap {
 
 
             void bubbleUp(size_t insert, size_t parent) {
-               // print();
                 if (m_heap[insert] > m_heap[parent]) {
                     std::swap(m_heap[insert], m_heap[parent]);
                     bubbleUp(parent, parent / 2);
