@@ -47,6 +47,9 @@ CMakeFiles/
 Makefile
 
 DSA
+dsa
+
+run.sh
 
 #other
 *.vscode
